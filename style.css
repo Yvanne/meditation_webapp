@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.app {
+  height: 100vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.time-select,
+.sound-picker,
+.player-container {
+  height: 80%;
+  flex: 1;
+  /* puts items in a row */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.player-container {
+  position: relative;
+}
+
+.fa-play,
+.fa-pause {
+  color: beige;
+  background-attachment: fixed;
+}
+
+.player-container svg {
+  position: absolute;
+  height: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-90deg);
+  pointer-events: none;
+}
+
+.time-display {
+  position: absolute;
+  bottom: 90%;
+  color: beige;
+  font-size: 60px;
+}
+
+video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  /* background-size: cover; */
+  width: 100%;
+  z-index: -10;
+}
+
+.time-select button,
+.sound-picker button {
+  color: aliceblue;
+  width: 30%;
+  height: 15%;
+  background: none;
+  border: 2px solid wheat;
+  cursor: pointer;
+  font-size: 20px;
+  border-radius: 5px;
+  transition: all 0.5s ease;
+}
+
+.time-select button:hover,
+.sound-picker button:hover {
+  color: black;
+  background: blanchedalmond;
+}
+
+.sound-picker button {
+  margin: 0.6rem;
+  border: none;
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+}
+
+.sound-picker button img {
+  height: 100%;
+}
+
+/* COLOR FOR EACH SOUND LOGO */
+.sound-picker button:nth-child(1) {
+  background: rgb(188, 210, 240);
+}
+
+.sound-picker button:nth-child(2) {
+  background: rgb(226, 176, 111);
+}
+
+.sound-picker button:nth-child(3) {
+  background: rgb(224, 130, 53);
+}
+
+.sound-picker button:nth-child(4) {
+  background: rgb(235, 235, 69);
+}
